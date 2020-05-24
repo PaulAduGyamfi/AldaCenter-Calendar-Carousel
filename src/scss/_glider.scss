@@ -1,0 +1,81 @@
+@use './global';
+
+
+.glider-contain{
+    width: 90vw;
+    height: 100%;
+
+    button svg{
+        cursor: pointer;
+    }
+
+    .glider, .glider-track{
+        //    display: flex;
+        //    justify-content: space-evenly;
+        //    overflow-x: scroll;
+        
+           .card{
+               display: flex;
+               flex-direction: column;
+               display: block;
+               margin: 1.5em;
+               padding: .7em;
+               height: 31em !important;
+               width: 320.5px;
+
+               header{
+                   font-weight: bolder;
+                   padding: 1.5em;
+                   height: 5.3em;
+                   width: 100%;
+                   background-image: url('../imgs/red-rays.jpg');
+                   background-size: cover;
+                   color: #fff;
+               }
+               content{
+                   display: flex;
+                   flex-direction: column;
+                    // background-color: #fafafa;
+                    height: 17em;
+                    
+                    .calendar-wrap{
+                        display: flex;
+                        .day{
+                            width: 100%;
+                            padding-right: 2em;
+                            padding-left: 0.2em;
+                            margin: 1em 0.3em;
+                            height: 3.7em;
+                            color: #990000;
+                        }
+                        .calendar{
+                            padding: 0.6em 0.4em;
+                            margin-right: 0.8em;
+                            color: #fff;
+                            background-color: #990000;
+                            width: 4em;
+                            height: 5em;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                           .month{
+                                font-weight: 100;
+                            }
+                            .number{
+                                font-weight: 900;
+                                font-size: 2em;
+                            }
+                        }
+                    }
+                    p .paragraph{
+                        font-size: 0.8em;
+                        padding-left: 0.7em;
+                        margin: 1em 0.3em;
+                    }
+               }
+        }
+       
+    }
+   
+}
