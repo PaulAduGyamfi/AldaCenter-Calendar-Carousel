@@ -34,6 +34,7 @@ userEventMaker({
   Title: "Webinars",
   Day: "Presented live and on-demand",
   Caption: "An Alda-certified instructor will help scientists and other researchers learn to identify and better understand the people they will be addressing.",
+  Link: "https://www.stonybrook.edu/admissions/",
 });
 
 userEventMaker({

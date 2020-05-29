@@ -5,7 +5,7 @@ const createEventModel = (eventOject) => {
     const element = `
             
             <div class="card" style="height: auto; width: 443px;">
-              <header>${eventOject.Title}</header>
+              <header><a href="${eventOject.Link}">${eventOject.Title}</a></header>
               <content>
                 <div class="calendar-wrap">
                     <p class="day ${eventOject.isOnCalendar && 'calendar'}">${eventOject.Day}</p>
