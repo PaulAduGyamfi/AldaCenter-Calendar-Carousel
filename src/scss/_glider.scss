@@ -1,81 +1,147 @@
 @use './global';
+@use './glider.min.css';
 
+.alda-calendar {
+  margin: 0 auto;
+  width: 65%;
+}
+.glider-contain {
+  width: 100%;
+  height: 100%;
+  font-family: "Effra W01", "Effra W01", Helvetica, sans-serif;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .alda-calendar-button svg {
+    cursor: pointer;
+    outline: none;
+  }
 
-.glider-contain{
-    width: 90vw;
-    height: 100%;
+  .glider,
+  .glider-track {
+      width: 100%;
+    .card {
+      display: block;
+      margin: 0.3em;
+      padding: 0.6em;
+      height: 31em !important;
+      //    width: 210px;
+         min-width: 210px;
 
-    button svg{
-        cursor: pointer;
-    }
+      header {
+        font-weight: bolder;
+        //     padding: 1em;
+        //    font-size: 20px;
+        height: 70px;
+        min-height: 60px;
+        padding: 1em;
+        padding-right: 0.8em;
+        background-image: url("../imgs/red-rays.jpg");
+        background-size: cover;
+        color: #fff;
 
-    .glider, .glider-track{
-        //    display: flex;
-        //    justify-content: space-evenly;
-        //    overflow-x: scroll;
-        
-           .card{
-               display: flex;
-               flex-direction: column;
-               display: block;
-               margin: 1.5em;
-               padding: .7em;
-               height: 31em !important;
-               width: 320.5px;
+        .alda-cal-title {
+          margin: 0;
+          margin-left: 1em;
+          // margin-bottom: 1em;
+          box-sizing: border-box;
+          // padding: 0 2em;
 
-               header{
-                   font-weight: bolder;
-                   padding: 1.5em;
-                   height: 5.3em;
-                   width: 100%;
-                   background-image: url('../imgs/red-rays.jpg');
-                   background-size: cover;
-                   color: #fff;
-               }
-               content{
-                   display: flex;
-                   flex-direction: column;
-                    // background-color: #fafafa;
-                    height: 17em;
-                    
-                    .calendar-wrap{
-                        display: flex;
-                        .day{
-                            width: 100%;
-                            padding-right: 2em;
-                            padding-left: 0.2em;
-                            margin: 1em 0.3em;
-                            height: 3.7em;
-                            color: #990000;
-                        }
-                        .calendar{
-                            padding: 0.6em 0.4em;
-                            margin-right: 0.8em;
-                            color: #fff;
-                            background-color: #990000;
-                            width: 4em;
-                            height: 5em;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            text-align: center;
-                           .month{
-                                font-weight: 100;
-                            }
-                            .number{
-                                font-weight: 900;
-                                font-size: 2em;
-                            }
-                        }
-                    }
-                    p .paragraph{
-                        font-size: 0.8em;
-                        padding-left: 0.7em;
-                        margin: 1em 0.3em;
-                    }
-               }
+          // padding-top: 0;
+          // width: 100%;
+          font-size: 20px;
+
+          // word-wrap: break-word;
         }
-       
+      }
+      content {
+        display: flex;
+        flex-direction: column;
+        // background-color: #fafafa;
+        height: 80%;
+
+        .calendar-wrap {
+          display: flex;
+          margin-bottom: 1em;
+          height: 25%;
+          .day {
+            width: 100%;
+            padding-right: 2em;
+            padding-left: 0.2em;
+            margin: 1em 0.3em;
+            margin-left: 0;
+            height: 3.7em;
+            color: #990000;
+            .false {
+              font-size: 1em;
+            }
+          }
+          .calendar {
+            padding: 0.6em 0.4em;
+            margin-right: 0.8em;
+            color: #fff;
+            background-color: #990000;
+            width: 4em;
+            height: 4.3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .month {
+              font-size: 1.1em;
+              text-transform: uppercase;
+              font-weight: 500;
+            }
+            .number {
+              font-weight: 900;
+              font-size: 2em;
+            }
+          }
+        }
+        p .paragraph {
+          font-size: 0.8em;
+          padding-left: 0;
+          margin: 1em 0.3em;
+        }
+
+        a {
+          font-size: 0.8em;
+          font-weight: 900;
+          color: #990000;
+          text-decoration: none;
+        }
+      }
     }
-   
+  }
+}
+
+@media only screen  and (min-width : 300px) and (max-width : 426px){
+
+    .glider,
+    .glider-track {
+        width: auto;
+      .card {
+        //     width: 250px !important;
+        //    min-width: 250px !important;
+      }
+    }
+}
+
+
+@media only screen  and (min-width : 2559px) {
+
+    .glider,
+    .glider-track {
+        width: auto;
+      .card {
+           min-width: 400px !important;
+      }
+    }
 }

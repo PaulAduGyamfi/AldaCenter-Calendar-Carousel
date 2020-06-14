@@ -1,5 +1,6 @@
 const EventBuilder = () => {
     let Title = "";
+    let LinkText = "";
     let Link = "";
     let Day = "Dates to be announced";
     let Day2 = "";
@@ -10,6 +11,10 @@ const EventBuilder = () => {
     return{
         withTitle(value){
             Title = value;
+            return this;
+        },
+        withLinkText(value){
+            LinkText = value;
             return this;
         },
         withLink(value){
@@ -42,6 +47,7 @@ const EventBuilder = () => {
         build(){
             return{
                 Title,
+                LinkText,
                 Link,
                 Day,
                 Day2,

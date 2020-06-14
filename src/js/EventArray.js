@@ -6,6 +6,7 @@ let EventArray = [];
 
 const userEventMaker = ({
     Title,
+    LinkText,
     Link,
     Day,
     Day2,
@@ -16,7 +17,7 @@ const userEventMaker = ({
     const event = EventBuilder();
 
     event.withTitle(Title);
-
+    if(isDefined(LinkText)) event.withLinkText(LinkText);
     if(isDefined(Link)) event.withLink(Link);
 
     if(isDefined(Day)){
