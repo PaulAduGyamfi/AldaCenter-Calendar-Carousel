@@ -171,8 +171,6 @@ userEventMaker({
 
 // Map Event into Glider
 let cardWrap = document.querySelector('.glider .glider-track');
-// let glider = '';
-EventArray.sort((a, b) => b.Day - a.Day) 
 EventArray
   .map((event) => createEventModel(event))
   .forEach((card) => {
@@ -180,24 +178,20 @@ EventArray
   });
 
   
-   
-  
 
-  // cardWrap.style.width = `${EventArray.length * 236}px`;
   // cardWrap.innerHTML = glider;
   
-  let aldaCalendarHeaderBackground = "rays"
-  let colorOfRays = "gray";
  
-    document.querySelectorAll('.alda-calendar-header').forEach(s => {
-      if(aldaCalendarHeaderBackground == "solid"){
-        s.style.backgroundImage = "none"
-        s.style.backgroundColor = "#990000"
-      }
-      else if(aldaCalendarHeaderBackground == "rays"){
-        if(colorOfRays == "gray"){
-          s.style.filter = "grayscale(100%)"
-       }
-      }
-    })
+    // document.querySelectorAll('.alda-calendar-header').forEach(s => {
+    //   if(backgroundScheme == "Solid Red"){
+    //     s.style.backgroundImage = "none"
+    //     s.style.backgroundColor = "#990000"
+    //   }
+    //   else if(backgroundScheme == "Rays Grey"){
+    //     s.style.filter = "grayscale(100%)"
+    //   }
+    //   else if(backgroundScheme == "Rays Red"){
+    //     return;
+    //   }
+    // })
   
